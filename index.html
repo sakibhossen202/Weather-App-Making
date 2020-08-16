@@ -54,7 +54,7 @@
         })
 
         function updateWather(cityName){
-            fetch(`https://api.openweathermap.org/data/2.5/weather?q=` + `${cityName}` + `&appid=e8b703414eee51e1b29f2a4b8a154722&units=metric`)
+            fetch(`http://api.openweathermap.org/data/2.5/weather?q=` + `${cityName}` + `&appid=e8b703414eee51e1b29f2a4b8a154722&units=metric`)
             
             .then (res => res.json())
             .then (data => {
@@ -65,7 +65,7 @@
                 
                 const conditionImage = document.getElementById("icon") 
 
-                conditionImage.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+                conditionImage.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
                 document.getElementById("windSpeed").innerText = `Wind Speed ${data.wind.speed} `;
                 document.getElementById("feelLike").innerText = `Feels Like ${data.main.feels_like} `;
 
