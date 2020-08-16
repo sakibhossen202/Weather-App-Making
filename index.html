@@ -36,9 +36,7 @@
             
             <h1 id="city">Dhaka</h1>
             <h3><span id="temperature">38.06</span>&deg;C</h3>
-            <h3 id="feelLike">
-
-            </h3>
+            <h3><span id="feelLike"></span>&deg;C</h3>
             <h1 class="lead" id="weather">Clouds</h1>
             <h3 id="windSpeed"></h3>
         </div>
@@ -67,7 +65,7 @@
 
                 conditionImage.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
                 document.getElementById("windSpeed").innerText = `Wind Speed ${data.wind.speed} `;
-                document.getElementById("feelLike").innerText = `Feels Like ${data.main.feels_like} `;
+                document.getElementById("feelLike").innerText = `Feels Like ${data.main.feels_like}`;
 
                 console.log(data)  
         })
