@@ -67,6 +67,41 @@
                 document.getElementById("windSpeed").innerText = `Wind Speed ${data.wind.speed} `;
                 document.getElementById("feelLike").innerText = `Feels Like ${data.main.feels_like}`;
 
+                if(data.weather[0].description =="light rain"){
+                    // document.getElementsByTagName("body").style.bgImage(url ="images/cloudy sky.jpg")
+                    document.body.style.backgroundImage = "url('images/cloudy.jpg')";
+                    document.body.style.backgroundSize = "cover";
+                    document.body.style.height = "100vh";    
+                }
+                 else if(data.weather[0].description =="overcast clouds"){
+                    // document.getElementsByTagName("body").style.bgImage(url ="images/cloudy sky.jpg")
+                    document.body.style.backgroundImage = "url('images/cloudy2.jpg')";
+                    document.body.style.backgroundSize = "cover";
+                    document.body.style.height = "100vh";    
+                }
+                 else if(data.weather[0].description =="moderate rain"){
+                    // document.getElementsByTagName("body").style.bgImage(url ="images/cloudy sky.jpg")
+                    document.body.style.backgroundImage = "url('images/cloudy2.jpg')";
+                    document.body.style.backgroundSize = "cover";
+                    document.body.style.height = "100vh";    
+                }
+                 else if(data.weather[0].description =="clear sky"){
+                    // document.getElementsByTagName("body").style.bgImage(url ="images/cloudy sky.jpg")
+                    document.body.style.backgroundImage = "url('images/drizzle.jpg')";
+                    document.body.style.backgroundSize = "cover";
+                    document.body.style.height = "100vh";    
+                }
+                 else if(data.weather[0].description =="scattered clouds"){
+                    // document.getElementsByTagName("body").style.bgImage(url ="images/cloudy sky.jpg")
+                    document.body.style.backgroundImage = "url('images/misty.jpg')";
+                    document.body.style.backgroundSize = "cover";
+                    document.body.style.height = "100vh";    
+                }
+
+                else{
+                    document.body.style.backgroundImage = "url(images/bg-image.jpg)"
+                }
+
                 console.log(data)  
         })
         }
